@@ -1,0 +1,71 @@
+/* LICENSE: GNU GPL v3 You should have received a copy of the GNU General */
+/* Public License along with this program. If not, see */
+/* https://www.gnu.org/licenses/. */
+
+/*******************************/
+/* Stylesheet for multieditors */
+/*******************************/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('node_modules/prosemirror-view/style/prosemirror.css');
+@import url('node_modules/prosemirror-example-setup/style/style.css');
+@import url('node_modules/prosemirror-gapcursor/style/gapcursor.css');
+@import url('node_modules/prosemirror-menu/style/menu.css');
+
+.cm-gutter {
+    background-color: #e0e0ff;
+}
+.ͼo .cm-activeLineGutter {
+    background-color: #a0a0dd;
+}
+.ͼ1 .cm-scroller {
+    font-family: 'JetBrains Mono', monospace;
+}
+dialog {
+    max-width: 25rem;
+}
+.symbolpicker span {
+    display: inline-block;
+    width: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.symbolpicker span:hover {
+    background-color: LightBlue;
+}
+.multieditor .innerwrapper {
+    min-height: 10rem;
+}
+.multieditor fieldset label {
+    user-select: none;
+}
+.multieditor .pico fieldset .legend {
+    display: inline;
+    margin-right: 1rem;
+}
+.pico .multieditor fieldset,
+.multieditor .pico fieldset,
+.pico multieditor .pico fieldset,
+.multieditor fieldset {
+    font-size: 85%;
+    padding: 0.5rem;
+    margin: 0;
+    border-top: 1px solid rgb(192,192,192);
+}
+.multieditor .math {
+    font-style: italic;
+}
+.multieditor .math.display {
+    display: block;
+    text-align:center;
+}
+.ProseMirror {
+    margin: 0.5rem;
+}
+article {
+    padding: 1rem;
+    border: 1px solid LightGray;
+    margin: 0.3rem;
+}

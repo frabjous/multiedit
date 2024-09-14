@@ -1,0 +1,29 @@
+{
+  "name": "multiedit",
+  "version": "0.0.1",
+  "description": "Web editor that allows switching between WYSIWYG, Markdown, and HTML source modes",
+  "main": "multiedit.js",
+  "scripts": {
+    "bundle": "node_modules/.bin/rollup load.mjs -f iife -o editor-bundle.js -p @rollup/plugin-node-resolve",
+  },
+  "author": "Kevin C. Klement",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@codemirror/lang-css": "^6.3.0",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-markdown": "^6.2.5",
+    "@ddietr/codemirror-themes": "^1.4.2",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "codemirror": "^6.0.1",
+    "prosemirror": "^0.11.1",
+    "prosemirror-example-setup": "^1.2.3",
+    "prosemirror-model": "^1.22.3",
+    "prosemirror-schema-basic": "^1.2.3",
+    "prosemirror-schema-list": "^1.4.1",
+    "prosemirror-state": "^1.4.3",
+    "prosemirror-transform": "^1.10.0",
+    "prosemirror-view": "^1.34.2",
+    "rollup": "^4.21.3"
+  }
+}
