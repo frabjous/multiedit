@@ -69,3 +69,11 @@ article {
     border: 1px solid LightGray;
     margin: 0.3rem;
 }
+
+[contenteditable="true"]:active, [contenteditable="true"]:focus {
+   outline:none;
+}
+
+:active, :focused {
+    outline: 1px solid red;
+}
