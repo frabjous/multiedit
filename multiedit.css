@@ -74,6 +74,3 @@ article {
    outline:none;
 }
 
-:active, :focused {
-    outline: 1px solid red;
-}

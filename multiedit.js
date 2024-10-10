@@ -377,8 +377,8 @@ function unescapedpair(s,r,len) {
 }
 
 // load other needed resources
-loadCSS('multiedit/multiedit.css');
-loadScript("multiedit/editor-bundle.js");
+loadCSS('/multiedit/multiedit.css');
+loadScript("/multiedit/editor-bundle.js");
 loadScript("https://unpkg.com/turndown/dist/turndown.js");
 loadScript("https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js");
 loadScript("https://cdn.jsdelivr.net/npm/markdown-it-sub/dist/markdown-it-sub.min.js");

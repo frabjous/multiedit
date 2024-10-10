@@ -7,7 +7,7 @@ Based on [ProseMirror](https://prosemirror.net/) and [CodeMirror](https://codemi
 
 ## Installing
 
-Clone this repository into a webserver-served directory as a subdirectory of where the pages that will call it are served. E.g.,
+Clone this repository into a subdirectory of your webserver’s document root. E.g.,
 
 ```sh
 cd /var/www/
@@ -25,7 +25,7 @@ npm run bundle
 Load the `multiedit.js` script in your document:
 
 ```html
-<script charset="utf-8" src="multiedit/multiedit.js"></script>
+<script charset="utf-8" src="/multiedit/multiedit.js"></script>
 ```
 
 Create a multieditor using the `multieditor(..)` function (use `window.multieditor` in a module). Because the script loads other scripts, it is probably necessary to do so only after the window is fully loaded.
