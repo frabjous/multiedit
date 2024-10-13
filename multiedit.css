@@ -64,7 +64,7 @@ dialog {
 .ProseMirror {
     margin: 0.5rem;
 }
-article {
+.multieditor article {
     padding: 1rem;
     border: 1px solid LightGray;
     margin: 0.3rem;
