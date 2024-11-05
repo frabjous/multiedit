@@ -1,7 +1,7 @@
 
 # multiedit
 
-Javascript for creating simple multi-modal web editors that allow switching between WYSIWYG, markdown and HTML source editing modes.
+Javascript module for creating simple multi-modal web editors that allow switching between WYSIWYG, markdown and HTML source editing modes.
 
 Based on [ProseMirror](https://prosemirror.net/) and [CodeMirror](https://codemirror.net/).
 
@@ -14,36 +14,34 @@ cd /var/www/
 git clone --depth 1 https://github.com/frabjous/multiedit.git
 ```
 
-Use npm to install the dependencies and create a browser-loadable bundle.
+Use npm to install the dependencies, and create a browser-loadable bundle.
 
 ```sh
 cd multiedit
 npm install
-npm run bundle
+npm run build
 ```
 
-Load the `multiedit.js` script in your document:
+The last command should create a file `multieditor.mjs`.
+
+Load the `multieditor.mjs` script in your document through a module script tag, and create an editor using the `multieditor(..)` function.
 
 ```html
-<script charset="utf-8" src="/multiedit/multiedit.js"></script>
-```
-
-Create a multieditor using the `multieditor(..)` function (use `window.multieditor` in a module). Because the script loads other scripts, it is probably necessary to do so only after the window is fully loaded.
-
-```javascript
-window.addEventListener('load', () => {
-    const me = multieditor({
-        parent: document.body,
-        mode: 'wysiwyg',
-        content: '<p></p>'
-    });
+<script type="module">
+import multieditor from "./multiedit/multieditor.mjs";
+const me = multieditor({
+    parent: document.body,
+    mode: 'wysiwyg',
+    content: '<p></p>'
 });
+</script>
 ```
+
 The `parent` argument can either be a DOM element, or, if a string is passed instead, an id of a DOM element. The editor will be placed inside this element.
 
 The `mode` argument determines what mode the editor starts in, and should be one of `'wysiwyg'` for the ProseMirror WYSIWYG editing mode, `'md'` for the Markdown editing mode, or `'html'` for the HTML source editing mode.
 
-The `content` argument determines the initial content of the editor, and should consist of HTML if either the `'wysiwyg'` or `'html'` editing modes are used to start, or of markdown if the `'md'` mode is used to start.
+The `content` argument determines the initial content of the editor, and should consist of HTML if either the `'wysiwyg'` or `'html'` editing modes are used at the start, or of markdown if the `'md'` mode is used at the start.
 
 The modes can be switched between each other using the radio buttons at the bottom.
 
@@ -62,6 +60,8 @@ This returns an object with three properties:
     "html": "⟨the markdown converted to html in md mode⟩"
 }
 ```
+
+Note also that when the script is loaded it also assigns the `multieditor(..)` function to the global `window` object as well, so it can be called outside of a module so long as the module is already loaded.
 
 ## License
 

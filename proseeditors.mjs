@@ -95,7 +95,10 @@ export default function getProseEditor(parent, contentid) {
             })
         }
     }
-
+    const mbmb = parent.getElementsByClassName("ProseMirror-menubar");
+    for (const mb of mbmb) {
+        mb.style.minHeight = "0px";
+    }
     return view;
 
 }

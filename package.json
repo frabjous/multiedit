@@ -4,7 +4,7 @@
   "description": "Web editor that allows switching between WYSIWYG, Markdown, and HTML source modes",
   "main": "multiedit.js",
   "scripts": {
-    "bundle": "node_modules/.bin/rollup load.mjs -f iife -o editor-bundle.js -p @rollup/plugin-node-resolve"
+    "build": "node_modules/.bin/rollup load.mjs -f es -o multieditor.mjs -p @rollup/plugin-node-resolve"
   },
   "author": "Kevin C. Klement",
   "license": "GPL-3.0-or-later",

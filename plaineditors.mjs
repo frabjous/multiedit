@@ -12,7 +12,8 @@
 import {indentUnit, syntaxHighlighting, HighlightStyle} from '@codemirror/language';
 import {EditorView, basicSetup} from "codemirror";
 import {tags as t} from "@lezer/highlight" //~/http/tmp/multiedit/node_modules/@ddietr/codemirror-themes/dist/theme
-import {githubLight as ctheme} from '@ddietr/codemirror-themes/github-light.js';
+//import {githubLight as ctheme} from '@ddietr/codemirror-themes/github-light.js';
+import {githubLight as ctheme} from '@ddietr/codemirror-themes/github-light';
 import {
     cursorLineBoundaryBackward,
     copyLineDown,
